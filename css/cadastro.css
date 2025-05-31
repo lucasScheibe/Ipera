@@ -1,0 +1,78 @@
+/* Estilo para mostrar/ocultar senha sem JavaScript */
+
+.input-senha {
+    position: relative;
+    width: 100%;
+}
+
+.input-senha input[type="password"],
+.input-senha input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+/* Esconde o input type text por padrão */
+.input-senha input[type="text"] {
+    display: none;
+}
+
+/* Oculta o password e mostra o text quando checkbox está marcado */
+#toggleSenha:checked ~ #senha-password {
+    display: none;
+}
+
+#toggleSenha:checked ~ #senha-text {
+    display: block;
+}
+
+#toggleConfirmaSenha:checked ~ #confirma-password {
+    display: none;
+}
+
+#toggleConfirmaSenha:checked ~ #confirma-text {
+    display: block;
+}
+
+/* Checkbox invisível */
+.toggle-senha {
+    display: none;
+}
+
+/* Estilo do ícone olho para o toggle */
+.icone-olho {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 18px;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+/* Ícone olho aberto quando toggle ativo */
+#toggleSenha:checked + .icone-olho::before {
+    content: "\f06e"; /* olho aberto */
+    color: #333;
+}
+
+/* Ícone olho fechado quando toggle inativo */
+#toggleSenha:not(:checked) + .icone-olho::before {
+    content: "\f070"; /* olho fechado */
+}
+
+#toggleConfirmaSenha:checked + .icone-olho::before {
+    content: "\f06e";
+    color: #333;
+}
+
+#toggleConfirmaSenha:not(:checked) + .icone-olho::before {
+    content: "\f070";
+}

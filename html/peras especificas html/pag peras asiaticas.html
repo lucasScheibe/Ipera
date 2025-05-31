@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/peras especificas css/peras asiaticas.css">
+    <link rel="stylesheet" href="../../css/popup.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ipera</title>
+    
+</head>
+<body>
+
+    <div class="carregamento-wrapper">
+        <div class="spinner"></div>
+    </div><!--tela de carregamento-->
+
+    <input type="checkbox" id="toggle-menu" />
+    <input type="checkbox" id="toggle-popup" />
+
+  <header>
+    <div class="container-logo">
+      <a href="../main.html">
+        <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
+      </a>
+    </div>
+
+    <div class="container-wrapper">
+      <div class="container">
+        <div class="input-wrapper">
+          <input placeholder="Procure sua pera!" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-menu">
+      <label for="toggle-popup">
+        <img class="img-user" src="../../Imagens/user.png" alt="user img" />
+      </label>
+      <div class="menu">
+        <label for="toggle-menu" class="btn-menu">
+          <span>&#9776;</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-menu">
+    <label for="toggle-menu" class="btn-close">&times;</label>
+    <h2>Seu Carrinho</h2>
+
+    <div class="item-carrinho">
+      <span class="nome-item">Pera do Amor</span>
+      <button class="btn-quantidade">-</button>
+      <span class="quantidade">1</span>
+      <button class="btn-quantidade">+</button>
+    </div>
+
+    <div class="item-carrinho">
+      <span class="nome-item">Pera Asiática</span>
+      <button class="btn-quantidade">-</button>
+      <span class="quantidade">1</span>
+      <button class="btn-quantidade">+</button>
+    </div>
+
+    <div class="item-carrinho">
+      <span class="nome-item">Pera Europeia</span>
+      <button class="btn-quantidade">-</button>
+      <span class="quantidade">1</span>
+      <button class="btn-quantidade">+</button>
+    </div>
+
+    <a href="../pagamento/pagamento.html">
+    <div class="item-carrinho">
+      <button class="btn-pagar">Pagar</button>
+    </div>
+    </a>
+  </div>
+
+  <label for="toggle-popup" class="popup-overlay"></label><!-- Popup Overlay -->
+
+  <div class="popup"><!-- Popup -->
+    <h2>Bem-vindo!</h2>
+    <a href="cadastro.html"><i class="fa fa-user-plus"></i> Cadastrar-se</a>
+    <a href="login.html"><i class="fa fa-sign-in-alt"></i> Login</a>
+  </div>
+
+    <!-- Seção de detalhes do produto -->
+    <div class="produto-detalhe">
+        <img src="https://s3-sa-east-1.amazonaws.com/loja2/22beb950260a79adc18e69eac0601532.jpg" alt="Imagem da Pera asiatica">
+        
+        <div class="produto-info">
+            <h1>Pera Asiática Premium</h1>
+            <div class="avaliacao">
+                ★★★★☆ 4.5 (987 avaliações)
+            </div>
+            <div class="preco">
+                R$ 15,90 <s>R$ 19,90</s> <span class="desconto">20% OFF</span>
+            </div>
+            <div class="descricao">
+              Suculentas e crocantes, as peras asiáticas têm sabor delicadamente doce com um toque de acidez. Perfeitas para consumir frescas, em saladas ou para dar um toque especial a pratos e sobremesas.
+            </div>
+            <div class="quantidade1">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <footer>
+        <span class="txt-footer">© 2025 Ipera. Todos os direitos reservados</span>
+    </footer>
+
+</body>
+</html>
