@@ -221,3 +221,44 @@ a {
 .manter-logado label {
     cursor: pointer;
 }
+/* Modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Header */
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+/* Input de busca */
+body.dark-mode .input-wrapper input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Sidebar */
+body.dark-mode .sidebar-menu {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Itens do carrinho */
+body.dark-mode .item-carrinho {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* Popup */
+body.dark-mode .popup {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}

@@ -21,6 +21,14 @@
         <div class="container-logo">
             <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
         </div>
+        <!-- Switch Dark Mode -->
+        <div class="configuracoes">
+    <i class="fa fa-moon"></i>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+        </div>
     </header>
 
     <div class="formulario">
@@ -50,4 +58,23 @@
     </div>
 
 </body>
+<script>
+  const toggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  if (localStorage.getItem('modoEscuro') === 'true') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener('change', function () {
+    if (this.checked) {
+      body.classList.add('dark-mode');
+      localStorage.setItem('modoEscuro', 'true');
+    } else {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('modoEscuro', 'false');
+    }
+  });
+</script>
 </html>
