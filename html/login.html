@@ -32,7 +32,9 @@
 <div class="formulario">
     <img class="img-user" src="../Imagens/user.png" alt="Imagem de usuário">
     
-    <input type="email" placeholder="Seu email">
+    <input type="text" placeholder="Seu nome" id="nomeUsuario">
+    <input type="email" placeholder="Seu email" id="emailUsuario">
+
 
     <div class="input-senha">
         <input type="password" placeholder="Sua senha" id="senha">
@@ -45,13 +47,37 @@
         <label for="logado">Manter logado</label>
     </div>
 
-    <a href="main.html" class="btn">
-        <h1 class="texto-btn">Fazer login</h1>
-    </a>
+    <button class="btn" id="btnLogin">
+      <h1 class="texto-btn">Fazer login</h1>
+    </button>
+
+
 </div>
 
+<script>
+  document.getElementById("btnLogin").addEventListener("click", function () {
+    const nome = document.getElementById("nomeUsuario").value.trim();
+    const email = document.getElementById("emailUsuario").value.trim();
+
+    if (nome === "" || email === "") {
+      alert("Por favor, preencha nome e e-mail.");
+      return;
+    }
+
+    localStorage.setItem("usuarioLogado", nome);
+    window.location.href = "main.html";
+  });
+</script>
+
+
+
 </body>
-    <script>
+  
+  
+<script src="../js/carrinho.js"></script>
+
+
+  <script>
   const toggle = document.getElementById('darkModeToggle');
   const body = document.body;
 
@@ -70,4 +96,7 @@
     }
   });
     </script>
+
+
+
 </html>

@@ -29,6 +29,27 @@ header {
   gap: 40px;
 }
 
+
+
+
+body {
+  background-color: #ebebea; /* claro */
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.user-nome {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+
+
 .img-user {
   width: 40px;
   height: 40px;

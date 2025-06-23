@@ -40,6 +40,7 @@
       <label for="toggle-popup">
         <img class="img-user" src="../Imagens/user.png" alt="user img" />
       </label>
+      <div id="userNome" class="user-nome"></div>
       <div class="menu">
         <label for="toggle-menu" class="btn-menu">
           <span>&#9776;</span>
@@ -152,6 +153,42 @@
   </footer>
 
   <script src="../darkmode.js"></script>
+  <script src="../js/carrinho.js"></script>
+
+<script>
+    // Dark mode toggle
+    const toggleDark = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('modoEscuro') === 'true') {
+      body.classList.add('dark-mode');
+      toggleDark.checked = true;
+    }
+
+    toggleDark.addEventListener('change', () => {
+      if (toggleDark.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('modoEscuro', 'true');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('modoEscuro', 'false');
+      }
+    });
+
+    // Mostrar nome do usuário salvo
+    document.addEventListener('DOMContentLoaded', () => {
+      const nome = localStorage.getItem('usuarioLogado');
+      const userNomeDiv = document.getElementById('userNome');
+      if (nome && userNomeDiv) {
+        userNomeDiv.textContent = `Olá, ${nome}!`;
+        userNomeDiv.style.fontWeight = 'bold';
+        userNomeDiv.style.marginLeft = '10px';
+      }
+    });
+  </script>
+
+
+
 
 </body>
 </html>

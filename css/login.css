@@ -31,6 +31,23 @@ header {
   border-radius: 5px;
 }
 
+body {
+  background-color: #ebebea; /* claro */
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.user-nome {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+
 footer {
     width: 100%;
     background-color: transparent;

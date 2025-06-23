@@ -1,80 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../css/cadastro.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <title>Ipera - Cadastro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ipera - Cadastro</title>
+  <link rel="stylesheet" href="../css/cadastro.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="carregamento-wrapper">
-        <div class="spinner"></div>
+  <header>
+    <div class="container-logo">
+      <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
+    </div>
+    <div class="configuracoes">
+      <i class="fa fa-moon"></i>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+
+  <div class="formulario">
+    <img class="img-user" src="../Imagens/user.png" alt="Imagem de usuário" />
+
+    <input type="text" id="nome" placeholder="Seu nome completo" />
+    <input type="email" id="email" placeholder="Seu email" />
+
+    <div class="input-senha">
+      <input type="password" id="senha-password" placeholder="Sua senha" />
+      <input type="text" id="senha-text" placeholder="Sua senha" style="display:none;" />
+      <input type="checkbox" id="toggleSenha" class="toggle-senha" />
+      <label for="toggleSenha" class="icone-olho"></label>
     </div>
 
-    <header>
-        <div class="container-logo">
-            <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
-        </div>
-        <!-- Switch Dark Mode -->
-        <div class="configuracoes">
-    <i class="fa fa-moon"></i>
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider round"></span>
-    </label>
-        </div>
-    </header>
-
-    <div class="formulario">
-        <img class="img-user" src="../Imagens/user.png" alt="Imagem de usuário" />
-
-        <input type="text" placeholder="Seu nome completo" />
-
-        <input type="email" placeholder="Seu email" />
-
-        <div class="input-senha">
-            <input type="password" placeholder="Sua senha" id="senha-password" />
-            <input type="text" placeholder="Sua senha" id="senha-text" />
-            <input type="checkbox" id="toggleSenha" class="toggle-senha" />
-            <label for="toggleSenha" class="icone-olho"></label>
-        </div>
-
-        <div class="input-senha">
-            <input type="password" placeholder="Confirme sua senha" id="confirma-password" />
-            <input type="text" placeholder="Confirme sua senha" id="confirma-text" />
-            <input type="checkbox" id="toggleConfirmaSenha" class="toggle-senha" />
-            <label for="toggleConfirmaSenha" class="icone-olho"></label>
-        </div>
-
-        <a href="main.html" class="btn">
-            <h1 class="texto-btn">Cadastrar-se</h1>
-        </a>
+    <div class="input-senha">
+      <input type="password" id="confirma-password" placeholder="Confirme sua senha" />
+      <input type="text" id="confirma-text" placeholder="Confirme sua senha" style="display:none;" />
+      <input type="checkbox" id="toggleConfirmaSenha" class="toggle-senha" />
+      <label for="toggleConfirmaSenha" class="icone-olho"></label>
     </div>
+
+    <button id="btnCadastrar" class="btn">
+      <h1 class="texto-btn">Cadastrar-se</h1>
+    </button>
+  </div>
+
+  <script>
+    // Dark mode toggle
+    const toggleDark = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('modoEscuro') === 'true') {
+      body.classList.add('dark-mode');
+      toggleDark.checked = true;
+    }
+
+    toggleDark.addEventListener('change', () => {
+      if (toggleDark.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('modoEscuro', 'true');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('modoEscuro', 'false');
+      }
+    });
+
+    // Toggle mostrar/ocultar senha - senha
+    const senhaPassword = document.getElementById('senha-password');
+    const senhaText = document.getElementById('senha-text');
+    const toggleSenha = document.getElementById('toggleSenha');
+
+    toggleSenha.addEventListener('change', () => {
+      if (toggleSenha.checked) {
+        senhaText.value = senhaPassword.value;
+        senhaPassword.style.display = 'none';
+        senhaText.style.display = 'block';
+      } else {
+        senhaPassword.value = senhaText.value;
+        senhaPassword.style.display = 'block';
+        senhaText.style.display = 'none';
+      }
+    });
+
+    senhaPassword.addEventListener('input', () => {
+      if (!toggleSenha.checked) {
+        senhaText.value = senhaPassword.value;
+      }
+    });
+    senhaText.addEventListener('input', () => {
+      if (toggleSenha.checked) {
+        senhaPassword.value = senhaText.value;
+      }
+    });
+
+    // Toggle mostrar/ocultar senha - confirma
+    const confirmaPassword = document.getElementById('confirma-password');
+    const confirmaText = document.getElementById('confirma-text');
+    const toggleConfirmaSenha = document.getElementById('toggleConfirmaSenha');
+
+    toggleConfirmaSenha.addEventListener('change', () => {
+      if (toggleConfirmaSenha.checked) {
+        confirmaText.value = confirmaPassword.value;
+        confirmaPassword.style.display = 'none';
+        confirmaText.style.display = 'block';
+      } else {
+        confirmaPassword.value = confirmaText.value;
+        confirmaPassword.style.display = 'block';
+        confirmaText.style.display = 'none';
+      }
+    });
+
+    confirmaPassword.addEventListener('input', () => {
+      if (!toggleConfirmaSenha.checked) {
+        confirmaText.value = confirmaPassword.value;
+      }
+    });
+    confirmaText.addEventListener('input', () => {
+      if (toggleConfirmaSenha.checked) {
+        confirmaPassword.value = confirmaText.value;
+      }
+    });
+
+    // Cadastro e salvar no localStorage
+    document.getElementById('btnCadastrar').addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const senha = toggleSenha.checked ? senhaText.value : senhaPassword.value;
+      const confirmaSenha = toggleConfirmaSenha.checked ? confirmaText.value : confirmaPassword.value;
+
+      if (!nome) {
+        alert('Por favor, preencha seu nome completo.');
+        return;
+      }
+      if (!email) {
+        alert('Por favor, preencha seu email.');
+        return;
+      }
+      if (!senha) {
+        alert('Por favor, preencha sua senha.');
+        return;
+      }
+      if (senha !== confirmaSenha) {
+        alert('As senhas não coincidem.');
+        return;
+      }
+
+      localStorage.setItem('usuarioLogado', nome);
+      localStorage.setItem('emailUsuario', email);
+
+      window.location.href = 'main.html';
+    });
+  </script>
 
 </body>
-<script>
-  const toggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-
-  if (localStorage.getItem('modoEscuro') === 'true') {
-    body.classList.add('dark-mode');
-    toggle.checked = true;
-  }
-
-  toggle.addEventListener('change', function () {
-    if (this.checked) {
-      body.classList.add('dark-mode');
-      localStorage.setItem('modoEscuro', 'true');
-    } else {
-      body.classList.remove('dark-mode');
-      localStorage.setItem('modoEscuro', 'false');
-    }
-  });
-</script>
 </html>
