@@ -24,9 +24,11 @@ header {
 }
 
 .logo-imagem {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: solid;
+  border-radius: 5px;
 }
 
 footer {
