@@ -66,7 +66,6 @@ body.dark-mode {
   width: 50px;
   height: 50px;
   margin: 10px;
-  border: solid;
   border-radius: 5px;
 }
 
@@ -453,4 +452,8 @@ body.dark-mode .slider {
 
 body.dark-mode .txt-footer {
   color: #aaa;
+}
+
+body.dark-mode .fa {
+  color: white;
 }
