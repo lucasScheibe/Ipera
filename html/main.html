@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ipera</title>
+  <link rel="stylesheet" href="../css/pagina inicial.css" />
+  <link rel="stylesheet" href="../css/popup.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="carregamento-wrapper">
+    <div class="spinner"></div>
+  </div><!--tela de carregamento-->
+
+  <input type="checkbox" id="toggle-menu" />
+  <input type="checkbox" id="toggle-popup" />
+
+  <header>
+    <div class="container-logo">
+      <a href="main.html">
+        <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
+      </a>
+    </div>
+
+    <div class="container-wrapper">
+      <div class="container">
+        <div class="input-wrapper">
+          <input placeholder="Procure sua pera!" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-menu">
+      <label for="toggle-popup">
+        <img class="img-user" src="../Imagens/user.png" alt="user img" />
+      </label>
+      <div id="userNome" class="user-nome"></div>
+      <div class="menu">
+        <label for="toggle-menu" class="btn-menu">
+          <span>&#9776;</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar-menu">
+    <label for="toggle-menu" class="btn-close">&times;</label>
+    <h2>Seu Carrinho</h2>
+
+    <div class="item-carrinho">
+      <span class="nome-item">Pera do Amor</span>
+      <button class="btn-quantidade">-</button>
+      <span class="quantidade">1</span>
+      <button class="btn-quantidade">+</button>
+    </div>
+
+    <div class="item-carrinho">
+      <span class="nome-item">Pera Asiática</span>
+      <button class="btn-quantidade">-</button>
+      <span class="quantidade">1</span>
+      <button class="btn-quantidade">+</button>
+    </div>
+
+    <div class="item-carrinho">
+      <span class="nome-item">Pera Europeia</span>
+      <button class="btn-quantidade">-</button>
+      <span class="quantidade">1</span>
+      <button class="btn-quantidade">+</button>
+    </div>
+
+    <a href="../html/pagamento/pagamento.html">
+    <div class="item-carrinho">
+      <button class="btn-pagar">Pagar</button>
+    </div>
+    </a>
+
+    <!-- Botão de configurações -->
+    <div class="configuracoes">
+      <i class="fa fa-moon"></i>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+      </label>
+    </div>
+
+  </div>
+
+  <!-- Popup Overlay -->
+  <label for="toggle-popup" class="popup-overlay"></label>
+
+  <!-- Popup -->
+  <div class="popup">
+    <h2>Bem-vindo!</h2>
+    <a href="cadastro.html"><i class="fa fa-user-plus"></i> Cadastrar-se</a>
+    <a href="login.html"><i class="fa fa-sign-in-alt"></i> Login</a>
+  </div>
+
+  <div class="texto-conteudo">
+    <span><strong>Shop. </strong>Encontre aqui o que você mais<strong> espêra.</strong></span>
+  </div>
+
+  <div class="grupo-peras">
+    <a href="pag peras estrangeiras.html">
+      <div class="item-pera">
+        <div class="imagem-wrapper">
+          <img
+            class="imagens"
+            src="https://imgs.search.brave.com/NRhby0h6HzXa54E3I4ckIc86gpvrb04YXs7QpPa29eY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2NmL1BlYXJzLmpw/Zw"
+            alt="imagem pera estrangeira"
+          />
+        </div>
+        <span class="nome-pera">Peras Estrangeiras</span>
+        <span class="em-alta">Mais vendido</span>
+      </div>
+    </a>
+
+    <a href="pag peras brasileiras.html">
+      <div class="item-pera">
+        <div class="imagem-wrapper">
+          <img
+            class="imagens"
+            src="https://imgs.search.brave.com/r5obge3Lbi1e0Nv9328w6gu3kNfXF59ik5DZgxQ8RvA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taW51/dG9zYXVkYXZlbC5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDkvcGVy/YS1kYW5qb3UtbWlu/dXRvLXNhdWRhdmVs/LnBuZw"
+            alt="imagem pera Brasileira"
+          />
+        </div>
+        <span class="nome-pera">Peras Brasileiras</span>
+      </div>
+    </a>
+
+    <a href="pag peras emocoes.html">
+      <div class="item-pera">
+        <div class="imagem-wrapper">
+          <img
+            class="imagens"
+            src="https://imgs.search.brave.com/H5CRqEPkEhYrUUIxw7Gy_jtKu7hX6bQWxrzkCvOJvIo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9wZXJhcy12ZXJt/ZWxoYXMtc3VjdWxl/bnRhcy1kb2Nlcy1l/bS11bS1lc2N1cm9f/MjUzMzYyLTE1ODcu/anBnP3NlbXQ9YWlz/X2h5YnJpZA"
+            alt="Imagem pera das emoções"
+          />
+        </div>
+        <span class="nome-pera">Peras das Emoções</span>
+        <span class="falta">Em falta</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <span class="txt-footer">© 2025 Ipera. Todos os direitos reservados</span>
+  </footer>
+
+  <script src="../darkmode.js"></script>
+  <script src="../js/carrinho.js"></script>
+
+<script>
+    // Dark mode toggle
+    const toggleDark = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('modoEscuro') === 'true') {
+      body.classList.add('dark-mode');
+      toggleDark.checked = true;
+    }
+
+    toggleDark.addEventListener('change', () => {
+      if (toggleDark.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('modoEscuro', 'true');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('modoEscuro', 'false');
+      }
+    });
+
+    // Mostrar nome do usuário salvo
+    document.addEventListener('DOMContentLoaded', () => {
+      const nome = localStorage.getItem('usuarioLogado');
+      const userNomeDiv = document.getElementById('userNome');
+      if (nome && userNomeDiv) {
+        userNomeDiv.textContent = `Olá, ${nome}!`;
+        userNomeDiv.style.fontWeight = 'bold';
+        userNomeDiv.style.marginLeft = '10px';
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ipera - Pagamento</title>
+  <link rel="stylesheet" href="../../css/pagamento/pagamento.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="carregamento-wrapper">
+        <div class="spinner"></div>
+  </div><!--tela de carregamento-->
+
+<header>
+  <div class="container-logo">
+    <a href="../main.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa">
+    </a>
+  </div>
+
+  <div class="container-wrapper">
+      <div class="container">
+        <div class="input-wrapper">
+          <input placeholder="Procure sua pera!" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+</header>
+
+<main class="main-content">
+  <section class="payment-form">
+    <h2>Dados de Pagamento</h2>
+    <form>
+      <label>Nome no Cartão</label>
+      <input type="text" placeholder="Seu nome completo">
+
+      <label>Número do Cartão</label>
+      <input type="text" placeholder="xxxx xxxx xxxx xxxx">
+
+      <label>Validade</label>
+      <input type="text" placeholder="MM/AA">
+
+      <label>CVV</label>
+      <input type="text" placeholder="123">
+
+      <label>Forma de Pagamento</label>
+      <select>
+        <option>Cartão de Crédito</option>
+        <option>Boleto</option>
+        <option>PIX</option>
+      </select>
+    </form>
+  </section>
+
+  <section class="order-summary">
+    <h2>Resumo do Pedido</h2>
+    <ul>
+      <li><span>Pera do Amor</span> <span>R$ 499,99</span></li>
+      <li><span>Pera Asiática</span> <span>R$ 15,90</span></li>
+      <li><span>Pera Europeia</span> <span>R$ 7,59</span></li>
+    </ul>
+    <hr>
+    <ul>
+      <li><strong>Total</strong> <strong>R$ 523,48</strong></li>
+    </ul>
+    <a href="../../html/pagamento/confirmação pagamento.html">
+      <button type="submit" class="btn-pagar">Finalizar Pedido</button>
+    </a>
+  </section>
+</main>
+
+  <footer>
+    <span class="txt-footer">© 2025 Ipera. Todos os direitos reservados</span>
+  </footer>
+
+</body>
+</html>

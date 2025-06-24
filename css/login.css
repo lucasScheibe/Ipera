@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EBEBEA;
+    font-family: Poppins;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-imagem {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: solid;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #ebebea; /* claro */
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.user-nome {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.txt-footer {
+    font-size: 12px;
+}
+
+.carregamento-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 0.3s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ccc;
+    border-top: 6px solid black;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 25%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: #99999965;
+    padding: 70px 15px 15px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn {
+    display: flex;
+    background-color: #99999965;
+    width: 60%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #88888885;
+    transform: scale(1.05);
+}
+
+.texto-btn {
+    font-size: 16px;
+    margin: 0;
+}
+
+input::placeholder {
+    color: #999999d5;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.input-senha {
+    position: relative;
+    width: 100%;
+}
+
+.input-senha input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding-right: 40px;
+}
+
+.toggle-senha {
+    display: none;
+}
+
+.icone-olho {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.icone-olho::before {
+    content: "\f070";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 18px;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.toggle-senha:checked + .icone-olho::before {
+    content: "\f06e";
+    color: #333;
+}
+
+.toggle-senha:checked ~ #senha {
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.img-user {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    object-fit: cover;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: white;
+    padding: 5px;
+}
+
+.manter-logado {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #333;
+    align-self: flex-start;
+    margin-top: -20px;
+}
+
+.manter-logado input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #333;
+}
+
+.manter-logado label {
+    cursor: pointer;
+}
+/* Modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Header */
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+/* Input de busca */
+body.dark-mode .input-wrapper input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Sidebar */
+body.dark-mode .sidebar-menu {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Itens do carrinho */
+body.dark-mode .item-carrinho {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* Popup */
+body.dark-mode .popup {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
