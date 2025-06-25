@@ -280,3 +280,7 @@ body.dark-mode footer {
   background-color: #1a1a1a;
   color: #ccc;
 }
+
+body.dark-mode .manter-logado label{
+    color: white;
+}
