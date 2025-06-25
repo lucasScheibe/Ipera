@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const userImg = document.getElementById("userImage");
   const logoImg = document.getElementById("logoImage");
   const userNomeDiv = document.getElementById("userNome");
-  const popup = document.querySelector(".popup"); // pega o popup
+  const popup = document.querySelector(".popup");
 
   function setThemeImages(darkModeEnabled) {
     if (userImg) {
@@ -46,8 +46,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Mostrar nome do usuário salvo
-  const nome = localStorage.getItem("usuarioLogado");
+  // Exibir nome e email do usuário
+  const usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || {};
+  const nome = usuario.nome || 'Usuário';
+  const email = usuario.email || 'Email não cadastrado';
+  const nomeEl = document.getElementById('perfilNome');
+  const emailEl = document.getElementById('perfilEmail');
+  if (nomeEl) nomeEl.textContent = nome;
+  if (emailEl) emailEl.textContent = email;
+
+  // Exibir carrinho do usuário
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [
+    { nome: 'Pera do Amor', quantidade: 1 },
+    { nome: 'Pera Asiática', quantidade: 1 },
+    { nome: 'Pera Europeia', quantidade: 1 }
+  ];
+  const lista = document.getElementById('listaCarrinho');
+  if (lista) {
+    lista.innerHTML = '';
+    carrinho.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nome} (x${item.quantidade})`;
+      lista.appendChild(li);
+    });
+  }
+
+  // Mostrar nome do usuário salvo no topo (caso use userNomeDiv)
   if (nome && userNomeDiv) {
     userNomeDiv.textContent = `Olá, ${nome}!`;
     userNomeDiv.style.fontWeight = "bold";

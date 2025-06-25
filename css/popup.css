@@ -85,3 +85,19 @@
     transform: translateY(0);
   }
 }
+
+/* Modo escuro para o popup */
+body.dark-mode .popup {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .popup a {
+  background: #3a3a3a;
+  color: #ffffff;
+}
+
+body.dark-mode .popup a:hover {
+  background: #4a4a4a;
+}
+

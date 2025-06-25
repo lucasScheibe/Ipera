@@ -23,17 +23,9 @@
   <header>
     <div class="container-logo">
       <a href="main.html">
-        <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
+        <img id="logoImage" class="logo-imagem" src="../Imagens/pera.jpg" alt="Logo da Empresa" />
       </a>
     </div>
- <!-- Switch Dark Mode -->
-  <div class="configuracoes">
-    <i class="fa fa-moon"></i>
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider round"></span>
-      </label>
-     </div>
      
     <div class="container-wrapper">
       <div class="container">
@@ -45,8 +37,9 @@
     </div>
 
     <div class="user-menu">
+      <div id="userNome" class="user-nome"></div>
       <label for="toggle-popup">
-        <img class="img-user" src="../Imagens/user.png" alt="user img" />
+        <img id="userImage" class="img-user" src="../Imagens/user.png" alt="user img" />
       </label>
       <div class="menu">
         <label for="toggle-menu" class="btn-menu">
@@ -86,6 +79,15 @@
       <button class="btn-pagar">Pagar</button>
     </div>
     </a>
+
+    <div class="configuracoes">
+      <i class="fa fa-moon"></i>
+        <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+        </label>
+    </div>
+
   </div>
 
   <label for="toggle-popup" class="popup-overlay"></label><!-- Popup Overlay -->
@@ -153,29 +155,8 @@
             <span class="txt-footer">© 2025 Ipera. Todos os direitos reservados</span>
         </footer>
     
-
-
-</body>
-  <script>
-  const toggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-
-  if (localStorage.getItem('modoEscuro') === 'true') {
-    body.classList.add('dark-mode');
-    toggle.checked = true;
-  }
-
-  toggle.addEventListener('change', function () {
-    if (this.checked) {
-      body.classList.add('dark-mode');
-      localStorage.setItem('modoEscuro', 'true');
-    } else {
-      body.classList.remove('dark-mode');
-      localStorage.setItem('modoEscuro', 'false');
-    }
-  });
-  </script>
-
+  <script src="../js/peras estrangeiras.js"></script>
   <script src="../js/carrinho.js"></script>
 
+</body>
 </html>

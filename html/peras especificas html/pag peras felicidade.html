@@ -24,10 +24,10 @@
   <header>
     <div class="container-logo">
       <a href="../main.html">
-        <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa" />
+        <img id="logoImage" class="logo-imagem" src="../../../Imagens/pera.jpg" alt="Logo da Empresa" />
       </a>
     </div>
-
+     
     <div class="container-wrapper">
       <div class="container">
         <div class="input-wrapper">
@@ -38,8 +38,9 @@
     </div>
 
     <div class="user-menu">
+      <div id="userNome" class="user-nome"></div>
       <label for="toggle-popup">
-        <img class="img-user" src="../../Imagens/user.png" alt="user img" />
+        <img id="userImage" class="img-user" src="../../../Imagens/user.png" alt="user img" />
       </label>
       <div class="menu">
         <label for="toggle-menu" class="btn-menu">
@@ -79,14 +80,23 @@
       <button class="btn-pagar">Pagar</button>
     </div>
     </a>
+
+    <div class="configuracoes">
+      <i class="fa fa-moon"></i>
+        <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+        </label>
+    </div>
+    
   </div>
 
   <label for="toggle-popup" class="popup-overlay"></label><!-- Popup Overlay -->
 
   <div class="popup"><!-- Popup -->
     <h2>Bem-vindo!</h2>
-    <a href="cadastro.html"><i class="fa fa-user-plus"></i> Cadastrar-se</a>
-    <a href="login.html"><i class="fa fa-sign-in-alt"></i> Login</a>
+    <a href="../cadastro.html"><i class="fa fa-user-plus"></i> Cadastrar-se</a>
+    <a href="../login.html"><i class="fa fa-sign-in-alt"></i> Login</a>
   </div>
 
     <!-- Seção de detalhes do produto -->
@@ -116,9 +126,8 @@
         <span class="txt-footer">© 2025 Ipera. Todos os direitos reservados</span>
     </footer>
 
-  <script src="/Ipera/js/carrinho.js"></script>
-  
-
+  <script src="../../js/peras especificas java/peras felicidade.js"></script>
+  <script src="../js/carrinho.js"></script>
 
 </body>
 </html>

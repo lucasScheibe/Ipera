@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Ipera</title>
+    <title>Ipera - Perfil do Usuário</title>
 </head>
 <body>
-
     <div class="carregamento-wrapper">
         <div class="spinner"></div>
     </div>
 
 <header>
-
     <div class="container-logo">
-      <img class="logo-imagem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdNMdsLsbM3B6uNLr7FwBJ6BCeQKBF0WAdA&s" alt="Logo da Empresa">
+      <a href="main.html">
+      <img id="logoImage" class="logo-imagem" src="../Imagens/pera.jpg" alt="Logo da Empresa">
+      </a>
     </div>
-    
     <div class="configuracoes">
       <i class="fa fa-moon"></i>
       <label class="switch">
@@ -29,37 +28,29 @@
         <span class="slider round"></span>
       </label>
     </div>
-  </div>
-
 </header>
 
 <div class="formulario">
-    <img class="img-user" src="../Imagens/user.png" alt="Imagem de usuário">
-    
-    <input type="text" placeholder="Seu nome" id="nomeUsuario">
-    <input type="email" placeholder="Seu email" id="emailUsuario">
+    <img id="userImage" class="img-user" src="../Imagens/user.png" alt="Imagem de usuário">
+    <h2 id="perfilNome">Usuário</h2>
+    <p id="perfilEmail">Email</p>
 
-
-    <div class="input-senha">
-        <input type="password" placeholder="Sua senha" id="senha">
-        <input type="checkbox" id="toggleSenha" class="toggle-senha">
-        <label for="toggleSenha" class="icone-olho"></label>
+    <div class="carrinho-container">
+        <ul id="listaCarrinho">
+          <!-- Itens do carrinho serão inseridos aqui -->
+        </ul>
+        <a href="pagamento/pagamento.html">
+          <button class="btn">Meu Carrinho</button>
+        </a>
     </div>
-
-    <div class="manter-logado">
-        <input type="checkbox" id="logado">
-        <label for="logado">Manter logado</label>
-    </div>
-
-    <button class="btn" id="btnLogin">
-      <h1 class="texto-btn">Fazer login</h1>
-    </button>
-
-
 </div>
 
+<footer>
+  <span class="txt-footer">© 2025 Ipera. Todos os direitos reservados</span>
+</footer>
+
   <script src="../js/carrinho.js"></script>
-  <script src="../js/login.js"></script>
+  <script src="../js/perfil.js"></script>
 
 </body>
 </html>

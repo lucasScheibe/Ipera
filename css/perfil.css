@@ -1,0 +1,251 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Carregamento */
+.carregamento-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 0.3s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top: 6px solid black;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-imagem {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+/* Formulário Perfil */
+.formulario {
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 80px 25px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.img-user {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  background-color: #f2f2f2;
+}
+
+.formulario h2 {
+  margin-top: 60px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.formulario p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.carrinho-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.carrinho-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.carrinho-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.carrinho-container li {
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Botão */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+  transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #666;
+  background-color: transparent;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .formulario {
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .img-user {
+  background-color: #333;
+  border-color: #1a1a1a;
+}
+
+body.dark-mode .formulario p {
+  color: #ccc;
+}
+
+body.dark-mode .btn {
+  background-color: #333;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #222;
+}
+
+body.dark-mode .carrinho-container li {
+  background-color: #222;
+  border-color: #444;
+}
+
+body.dark-mode footer {
+  color: #999;
+}
+
+/* Dark mode switch */
+.configuracoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

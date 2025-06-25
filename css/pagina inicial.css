@@ -29,26 +29,15 @@ header {
   gap: 40px;
 }
 
-
-
-
 body {
   background-color: #ebebea; /* claro */
   color: #000;
-}
-
-body.dark-mode {
-  background-color: #222;
-  color: #fff;
 }
 
 .user-nome {
   font-weight: bold;
   margin-left: 10px;
 }
-
-
-
 
 .img-user {
   width: 40px;
@@ -414,7 +403,7 @@ body.dark-mode .container,
 body.dark-mode .sidebar-menu,
 body.dark-mode .popup,
 body.dark-mode .item-pera {
-  background-color: #2a2a2a;
+  background-color: #1D1C1D;
   color: #f0f0f0;
 }
 
@@ -446,10 +435,6 @@ body.dark-mode .btn-pagar:hover {
   background-color: #666;
 }
 
-body.dark-mode .slider {
-  background-color: #555;
-}
-
 body.dark-mode .txt-footer {
   color: #aaa;
 }
@@ -457,3 +442,37 @@ body.dark-mode .txt-footer {
 body.dark-mode .fa {
   color: white;
 }
+
+.popup.logado {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  z-index: 1001;
+  display: none;
+}
+
+body.dark-mode .popup.logado {
+  background-color: #1D1C1D;
+  color: #f0f0f0;
+}
+
+body.dark-mode .popup i{
+  color: white;
+}
+
+body.dark-mode .popup a {
+  color: white;
+}
+
+body.dark-mode .popup a {
+  background-color: #555;
+}
+
+body.dark-mode .popup a:hover {
+  background-color: #666;
+}
+
