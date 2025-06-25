@@ -1,0 +1,87 @@
+/* Oculta por padrão */
+.popup,
+.popup-overlay {
+  display: none;
+}
+
+/* Quando checkbox está marcado, mostra overlay e popup */
+#toggle-popup:checked ~ .popup-overlay {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+/* Popup visível quando checkbox está marcado */
+#toggle-popup:checked ~ .popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.popup {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 220px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.popup h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.popup a {
+  text-decoration: none;
+  color: #333;
+  background: #f7f7f7;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.popup a:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.popup a i {
+  font-size: 16px;
+}
+
+.img-user {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
